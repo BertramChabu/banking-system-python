@@ -63,8 +63,19 @@ class Bank:
             else:
                 print("Account not Found")
 
-    def transfer(from_account, to_account):
-        
+    def transfer(self,from_account, to_account,amount):
+        for f in self.amounts and t in self.amounts:
+            if f.account_number == from_account and t.account_number == to_account :
+                f.initial_deposit -=amount
+                t.intial_deposit +=amount
+                print("Money transfer from ", f.account_number, " to", t.account_number)
+            else:
+                print("Account not found")
+                print("Money transfer not successfull")
+
+
+
+
 
 
 
